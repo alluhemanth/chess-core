@@ -1,0 +1,26 @@
+<component name="ProjectDictionaryState">
+  <dictionary name="project">
+    <words>
+      <w>bestmove</w>
+      <w>fullmove</w>
+      <w>halfmove</w>
+      <w>halfmoves</w>
+      <w>hemanth</w>
+      <w>isready</w>
+      <w>kiwipete</w>
+      <w>movetext</w>
+      <w>pbppp</w>
+      <w>perft</w>
+      <w>pppbbppp</w>
+      <w>pppppppp</w>
+      <w>ppqpb</w>
+      <w>readyok</w>
+      <w>rnbq</w>
+      <w>rnbqk</w>
+      <w>rnbqkbnr</w>
+      <w>startpos</w>
+      <w>ucinewgame</w>
+      <w>uciok</w>
+    </words>
+  </dictionary>
+</component>
