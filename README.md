@@ -31,6 +31,22 @@ for flexibility, extensibility, and integration with engines like Stockfish.
    ./gradlew build
    ```
 
+### Using as a Dependency (via JitPack)
+
+This library is published in [Jitpack](https://jitpack.io/#alluhemanth/chess-core/), you can add it as your dependency
+it with:
+
+```kotlin
+repositories {
+    mavenCentral()
+    maven { url = uri("https://jitpack.io") }
+}
+
+dependencies {
+    implementation("com.github.alluhemanth:chess-core:1.0")
+}
+```
+
 ### Running the Example
 
 The project includes an example `main` function that demonstrates how to use the chess engine to play a game against
@@ -46,97 +62,33 @@ To run the example:
 The `ChessGame` class provides a complete chess game implementation, including board state management, move generation,
 and game logic. Below is an overview of its key methods and usage.
 
-### Creating a Game
-
 ```kotlin
 val game = ChessGame()
-```
 
-### Making Moves
-
-#### Using SAN (Standard Algebraic Notation)
-
-```kotlin
 game.makeSanMove("e4")
 game.makeSanMove("e5")
-```
 
-#### Using UCI (Universal Chess Interface)
-
-```kotlin
 game.makeUciMove("e2e4")
 game.makeUciMove("e7e5")
-```
 
-#### Directly Using Move Objects
-
-```kotlin
 val move = game.getLegalMoves().first()
 game.makeMove(move)
-```
 
-### Undo and Redo Moves
-
-```kotlin
 game.undo()
 game.redo()
-```
 
-### Querying Game State
-
-#### Get Current Board
-
-```kotlin
 game.getBoard()
-```
-
-#### Get Current Player
-
-```kotlin
 game.getCurrentPlayer()
-```
-
-#### Check if Game is Over
-
-```kotlin
 game.isGameOver()
-```
 
-#### Get Game Result
-
-```kotlin
 val result = game.getGameResult()
-```
 
-### Legal Moves
-
-```kotlin
 val legalMoves = game.getLegalMoves()
-```
 
-### FEN and PGN Support
-
-#### Get FEN
-
-```kotlin
-val fen = game.getFen()
-```
-
-#### Load FEN
-
-```kotlin
+game.getFen()
 game.loadFen("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1")
-```
 
-#### Get PGN
-
-```kotlin
 val pgn = game.getPgn()
-```
-
-#### Load PGN
-
-```kotlin
 game.loadPgn("1. e4 e5 2. Nf3 Nc6")
 ```
 
